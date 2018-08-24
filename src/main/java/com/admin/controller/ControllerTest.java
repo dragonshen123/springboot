@@ -82,20 +82,21 @@ public class ControllerTest {
 
         return userService.radisTest("select * from admin ");
     }
-
+   //redis的测试
     @RequestMapping(value = "radisTestEvict")
     @ResponseBody
     public List<Map<String,Object>> radisTestEvict(){
 
         return userService.radisTestEvict("select * from admin ");
     }
-
+    //session的测试
     @RequestMapping(value = "sessionTestSet")
     @ResponseBody
     public String sessionTestSet(HttpServletRequest request){
         request.getSession().setAttribute("message","session测试");
         return "session测试";
     }
+    //session的测试
     @RequestMapping(value = "sessionTestGet")
     @ResponseBody
     public Object sessionTestGet(HttpServletRequest request){
