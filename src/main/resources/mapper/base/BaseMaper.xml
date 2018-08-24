@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin.dao.base.BaseDao" >
+      <!--插入单个数据-->
+    <insert id="insertOneByObject" parameterType="Object" >
+        ${insertOneByObjectSql}
+    </insert>
+    <!--插入多个数据-->
+    <insert id="insertListByList" parameterType="Object" >
+        ${insertListByListSql}
+    </insert>
+
+    <!--插入多个数据-->
+    <insert id="insertBySql" parameterType="Object" >
+         ${insertSql}
+    </insert>
+    <!--删除单个个数据-->
+    <delete id="deleteOneId" parameterType="Object">
+          ${deleteOneId}
+    </delete>
+
+    <!--删除多个数据-->
+    <delete id="deleteBySql" parameterType="Object">
+         ${deleteSql}
+    </delete>
+    <!-- 跟新单个-->
+    <update id="updateOneByObject"  parameterType="Object">
+        ${updateObjectSql}
+    </update>
+    <!-- 跟新多个-->
+    <update id="updateListByList"  parameterType="Object">
+         ${updateListSql}
+    </update>
+
+    <!-- 跟新多个-->
+    <update id="updateBySql"  parameterType="Object">
+         ${updateSql}
+    </update>
+   <!-- 查询单个-->
+    <select id="queryOneById"  parameterType="Object" resultType="java.util.HashMap">
+         ${queryOneByIdSql}
+    </select>
+
+    <!-- 查询单个-->
+    <select id="queryBySql"  parameterType="Object" resultType="java.util.HashMap">
+        ${querySql}
+    </select>
+</mapper>
+
+
